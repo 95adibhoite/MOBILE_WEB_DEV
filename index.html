@@ -2,104 +2,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADITYA SAMBHAJI BHOITE</title>
-    
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ADITYA BHOITE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <header>
-        <h1>ADITYA SAMBHAJI BHOITE</h1>
+
+    <header class="bg-primary text-white text-center py-3">
+        <h1 class="display-4">My Travel Diary</h1>
     </header>
-    <main>
-        
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                
-                <div class="swiper-slide">
-                    <form id="school-form">
-                        <div class="form-group">
-                            <label for="school-name">Name of School:</label>
-                            <input type="text" id="school-name" name="school-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="date-of-joining">Date of Joining:</label>
-                            <input type="date" id="date-of-joining" name="date-of-joining" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Graduated:</label>
-                            <label for="graduated-yes">Yes</label>
-                            <input type="radio" id="graduated-yes" name="graduated" value="yes" required>
-                            <label for="graduated-no">No</label>
-                            <input type="radio" id="graduated-no" name="graduated" value="no">
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="swiper-slide">
-                    <form id="personal-form">
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number:</label>
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required oninvalid="this.setCustomValidity('Please enter a valid phone number in the format: 123-456-7890')" oninput="this.setCustomValidity('')">
-                        </div>
-                        <div class="form-group">
-                            <label for="zipcode">Zip Code:</label>
-                            <input type="text" id="zipcode" name="zipcode" pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d" required oninvalid="this.setCustomValidity('Please enter a valid Canadian zip code')" oninput="this.setCustomValidity('')">
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="swiper-slide">
-                    <form id="payment-form">
-                        <div class="form-group">
-                            <label for="card-number">Credit Card Number:</label>
-                            <input type="text" id="card-number" name="card-number" data-validate="card-number">
-                        </div>
-                        <div class="form-group">
-                            <label for="expiration-date">Expiration Date:</label>
-                            <input type="date" id="expiration-date" name="expiration-date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="cvv">CVV:</label>
-                            <input type="text" id="cvv" name="cvv" data-validate="cvv">
-                        </div>
-                    </form>
+
+    <div class="container mt-4">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <div class="bg-danger text-white p-3">
+                    <h2>Destination</h2>
+                    <p>Paris, France</p>
                 </div>
             </div>
-            
-            
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
 
-            
-            <div class="swiper-pagination"></div>
+            <div class="col-md-4 mb-4">
+                <div class="bg-info text-dark p-3">
+                    <h2>Facts</h2>
+                    <p>Currency: Euro</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="bg-success text-white p-3" data-toggle="modal" data-target="#myModal">
+                    <h2>Highlights</h2>
+                    <p>Click to see more</p>
+                </div>
+            </div>
+
         </div>
-    </main>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header bg-warning text-white">
+                        <h4 class="modal-title">More Highlights</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Eiffel Tower, Louvre Museum, Seine River Cruise, etc.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+
+            <div class="row">
     
+                <div class="col-md-4 mb-4">
+                    <div class="bg-info text-white p-3">
+                        <h2>Destination</h2>
+                        <p>Paris, France</p>
+                    </div>
+                </div>
     
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                <div class="col-md-4 mb-4">
+                    <div class="bg-primary text-dark p-3">
+                        <h2>Facts</h2>
+                        <p>Currency: Euro</p>
+                    </div>
+                </div>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            // Swiper options
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            
-        });
-    </script>
+                <div class="col-md-4 mb-4">
+                    <div class="bg-warning text-white p-3" data-toggle="modal" data-target="#myModal">
+                        <h2>Highlights</h2>
+                        <p>Click to see more</p>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+    
+                        <div class="modal-header bg-info text-white">
+                            <h4 class="modal-title">More Highlights</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+    
+                        <div class="modal-body">
+                            <p>Eiffel Tower, Louvre Museum, Seine River Cruise, etc.</p>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+
+        <div class="row mt-4">
+
+            <div class="col-md-6 mb-4">
+                <div class="bg-dark text-white p-3">
+                    <h2>Must Visit</h2>
+                    <p>Eiffel Tower, Notre-Dame Cathedral, Montmartre</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="bg-secondary text-white p-3">
+                    <h2>Tips</h2>
+                    <p>Try local cuisine, learn basic French phrases</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
